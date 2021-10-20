@@ -14,6 +14,12 @@ public class Smartphone extends Product {
         super();
     }
 
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        }
+        return (maker.contains(search));
+    }
 
     public String getMaker() {
         return maker;

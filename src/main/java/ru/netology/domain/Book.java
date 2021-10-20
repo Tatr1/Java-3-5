@@ -15,6 +15,10 @@ public class Book extends Product {
 
     }
 
+    public boolean matches(String search) {
+        return super.matches(search) || author.contains(search);
+    }
+
     public String getAuthor() {
         return author;
     }
