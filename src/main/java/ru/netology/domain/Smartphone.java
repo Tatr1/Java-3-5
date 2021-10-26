@@ -14,6 +14,7 @@ public class Smartphone extends Product {
         super();
     }
 
+    @Override
     public boolean matches(String search) {
         if (super.matches(search)) {
             return true;
@@ -49,6 +50,4 @@ public class Smartphone extends Product {
         return "Smartphone{" +
                 "maker='" + maker + '\'';
     }
-
-    ;
 }

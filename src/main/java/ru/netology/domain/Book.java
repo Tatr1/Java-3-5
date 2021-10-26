@@ -15,6 +15,7 @@ public class Book extends Product {
 
     }
 
+    @Override
     public boolean matches(String search) {
         return super.matches(search) || author.contains(search);
     }
@@ -47,7 +48,5 @@ public class Book extends Product {
         return "Book{" +
                 "author='" + author + '\'';
     }
-
-    ;
 }
 

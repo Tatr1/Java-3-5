@@ -18,10 +18,10 @@ public class Product {
 
     public boolean matches(String search) {
         if (name.contains(search)) {
-                return true;
-            }
-            return false;
+            return true;
         }
+        return false;
+    }
 
 
     public int getId() {

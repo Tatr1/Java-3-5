@@ -18,7 +18,7 @@ class ProductManagerTest {
     Product five = new Product(1, "card", 100);
     Product six = new Book(431, "My precious", 750, "QQ");
     Product seven = new Smartphone(266, "iTome", 567, "N");
-    Product eight = new Product(3,"Queen", 517);
+    Product eight = new Product(3, "Queen", 517);
 
     @BeforeEach
     public void setUp() {
@@ -57,14 +57,15 @@ class ProductManagerTest {
     }
 
     @Test
-    void searchByBookAutorQQ(){
+    void searchByBookAutorQQ() {
         Product[] actual = manager.searchBy("QQ");
         Product[] expected = {four, six};
         assertArrayEquals(expected, actual);
         System.out.println("Найдено: " + actual.length + " товар(ов)");
     }
+
     @Test
-    void searchBySmartMakerN(){
+    void searchBySmartMakerN() {
         Product[] actual = manager.searchBy("N");
         Product[] expected = {seven};
         assertArrayEquals(expected, actual);
